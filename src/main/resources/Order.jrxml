@@ -52,7 +52,7 @@
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[order_id]]></text>
+				<text><![CDATA[ID]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="79" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="657caec9-a3a2-4f24-b4d2-aa9feceb92d1">
@@ -61,7 +61,7 @@
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[order_code]]></text>
+				<text><![CDATA[Code]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="158" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="4b4c9275-c2c6-417f-9b0e-725c07486b23">
@@ -70,7 +70,7 @@
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[order_date]]></text>
+				<text><![CDATA[Date]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="237" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="3d0b0934-9ede-42e0-bc48-63581fc6077d">
@@ -79,7 +79,7 @@
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[quantity]]></text>
+				<text><![CDATA[Quantity]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="316" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="8b7b31bf-a734-461f-a5d8-6889f3881f2a">
@@ -88,7 +88,7 @@
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[total_price]]></text>
+				<text><![CDATA[Total Price]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="395" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="614399ed-fcb8-4fbb-8b88-2c2cfb830524">
@@ -97,7 +97,7 @@
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[customer_code]]></text>
+				<text><![CDATA[Customer Code]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Opaque" x="474" y="0" width="79" height="20" forecolor="#006699" backcolor="#E6E6E6" uuid="b5d37eaf-97bd-4ba7-bd67-32faa46e54a8">
@@ -106,7 +106,7 @@
 				<textElement textAlignment="Center">
 					<font size="14" isBold="true"/>
 				</textElement>
-				<text><![CDATA[item_code]]></text>
+				<text><![CDATA[Item Code]]></text>
 			</staticText>
 		</band>
 	</columnHeader>

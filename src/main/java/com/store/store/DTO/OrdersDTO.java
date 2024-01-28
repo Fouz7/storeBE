@@ -20,8 +20,6 @@ public class OrdersDTO {
 
     private Date order_date;
 
-    @NotNull(message = "Total price cannot be null")
-    @Positive(message = "Total price must be greater than 0")
     private Double total_price;
 
     @NotNull(message = "Order code cannot be null")

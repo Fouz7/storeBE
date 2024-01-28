@@ -3,6 +3,7 @@ package com.store.store.controllers;
 import java.io.FileNotFoundException;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,17 +17,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 @CrossOrigin(origins = "*")
-@RequestMapping("/store/report")
+@RequestMapping("/store/report/")
 @RestController
 public class ReportController {
-    
-
     @Autowired
     private ReportService reportService;
 
-
     @GetMapping("{format}")
-    public String generateReport(@PathVariable String format) throws FileNotFoundException, JRException{
+    public ResponseEntity<?> exportReport(@PathVariable String format) throws FileNotFoundException, JRException {
         return reportService.exportReport(format);
-    }    
+    }
 }

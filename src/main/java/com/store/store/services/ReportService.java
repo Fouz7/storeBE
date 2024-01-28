@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
@@ -24,9 +25,9 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 @Service
 public class ReportService {
     @Autowired
-    private  OrdersRepository ordersRepository;
+    private OrdersRepository ordersRepository;
 
-    public String exportReport(String reportFormat) throws FileNotFoundException, JRException{
+    public ResponseEntity<String> exportReport(String reportFormat) throws FileNotFoundException, JRException{
         String path = "C:\\Users\\fauza\\Downloads";
         List<Orders> orders = ordersRepository.findAll();
 
@@ -40,8 +41,6 @@ public class ReportService {
             JasperExportManager.exportReportToPdfFile(jasperPrint, path + "\\Order.pdf");
         }
 
-        return "report generated in path : " + path;
+        return ResponseEntity.ok("report generated in path : " + path);
     }
-
-    
 }

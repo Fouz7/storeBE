@@ -1,5 +1,7 @@
 package com.store.store.services;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
@@ -26,9 +28,13 @@ public class OrdersService {
     public OrdersDTO createOrder(OrdersDTO orderDto) {
         Optional<Items> item = itemRepository.findById(orderDto.getItem_code().getItem_id());
         if (item.isPresent()) {
-            orderDto.setTotal_price(item.get().getPrice() * orderDto.getQuantity());
-            Items selectedItem = item.get();
-            selectedItem.setStock(selectedItem.getStock() - orderDto.getQuantity());
+        BigDecimal price = BigDecimal.valueOf(item.get().getPrice());
+        BigDecimal quantity = BigDecimal.valueOf(orderDto.getQuantity());
+        BigDecimal totalPrice = price.multiply(quantity).setScale(2, RoundingMode.HALF_UP);
+        orderDto.setTotal_price(totalPrice.doubleValue());
+
+        Items selectedItem = item.get();
+        selectedItem.setStock(selectedItem.getStock() - orderDto.getQuantity());
         }
 
         Orders order = convertToEntity(orderDto);
